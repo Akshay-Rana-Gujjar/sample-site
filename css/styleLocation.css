@@ -1,0 +1,386 @@
+/**************************************************** Location ***************************************************/
+.pac-container
+{
+    background-color:#fff;
+    position:absolute !important;
+    z-index:1000;
+    border-radius:2px;
+    border-top:1px solid #d9d9d9;
+    font-family:Arial,sans-serif;
+    box-shadow:0 2px 6px rgba(0,0,0,0.3);
+    box-sizing:border-box;
+    overflow:hidden;
+    display:none; 
+}
+
+.pac-item
+{
+    cursor:default;
+    padding:0 4px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    line-height:30px;
+    text-align:left;
+    border-top:1px solid #e6e6e6;
+    font-size:11px;
+    color:#999;
+}
+.pac-item:hover{background-color:#fafafa;}
+.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe;}
+.pac-matched{font-weight:700;}
+
+.pac-item-query
+{
+    font-size:13px;
+    padding-right:3px;
+    color:#000;
+}
+
+.pac-icon
+{
+    width:15px;
+    height:20px;
+    margin-right:7px;
+    margin-top:7px;
+    display:inline-block;
+    vertical-align:top;
+    background-image:url('../images/icon_location_small.png');
+    background-repeat:no-repeat;  
+    background-size:16px;
+}
+
+.hdpi .pac-icon
+ {
+    background-image:url('../images/icon_location_small.png');
+ }
+.pac-icon-search{background-position:-1px -1px;}
+.pac-item-selected .pac-icon-search{background-position:-18px -1px;}
+.pac-icon-marker{}
+.pac-item-selected .pac-icon-marker{background-position:-18px -161px;}
+.pac-placeholder{color:gray;}
+
+/************************************* Select *************************************************/
+
+.dd_chk_select
+{
+	border-color: #CCCCCC;
+	border-style: solid;
+	border-width: 1px;
+	height: 18px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 12px;
+	text-decoration: none;
+	overflow: visible;
+	color: Black;
+	background-color: white;
+	width:300px; 
+}
+
+div.dd_chk_select:hover
+{
+	cursor: pointer;
+	width:300px; 
+}
+
+div.dd_chk_select div#caption
+{
+	overflow: hidden;
+	height: 16px;
+	margin-right: 20px;
+	margin-left: 2px;
+	text-align: left;
+	vertical-align: middle;
+	position: relative;
+	top: 1px;
+}
+
+/********************************** SearchStandard *************************************/
+
+#divSearchStandard .dd_chk_select_standard1
+{
+	border:1px solid #8e8d8d;
+	height: 45px;
+	margin: 12px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 18px;
+	text-decoration: none;
+	overflow: visible;
+	color: #9fa4a7;
+	background-color: white;
+	border-radius: 3px;
+	width:250px; 
+	background-image: url('../images/arrow_from_register_with_bg.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#divSearchStandard .dd_chk_select_standard_Professions 
+{
+	height: 45px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 16px;
+	text-decoration: none;
+	overflow: visible;
+	color: #9fa4a7;
+}
+
+#divSearchStandard .dd_chk_select_standard2
+{
+	height: 45px;
+	text-align: left;
+	vertical-align: top;
+	font-size: 15px;
+	text-decoration: none;
+	overflow: visible;
+	color: Black;
+	width:450px; 
+	line-height:15px; 
+}
+
+#divSearchStandardCheckBoxList input
+{
+	padding: 0;
+	margin: 0;
+	height: 21px;
+	width: 21px;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+
+#divSearchStandardCheckBoxList label
+{
+	float: left; 
+	line-height: 21px; 
+	color: #9fa4a7;
+	padding: 0 20px 0 28px;
+	font-size: 15px;
+	margin-right:10px; 
+}
+
+#divSearchStandardCheckBoxList:not(#foo) input:hover + label, #divSearchStandardCheckBoxList:not(#foo) input:focus + label,
+#divSearchStandardCheckBoxList:not(#foo) input + label:hover, #divSearchStandardCheckBoxList:not(#foo) input:focus + label			{  color: #7EBFBF; }
+
+#divSearchStandardCheckBoxList:not(#foo) input + label
+{
+	background: url('../images/sprite_for_check-box.png') 0 0 no-repeat;
+	height: 21px;
+	cursor:pointer;  
+}
+
+/* Checked styles */
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:checked + label 							{ background-position: 0 -20px; }
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:hover:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:focus:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:checked + label:hover,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:focus:checked + label 					{ background-position: 0 -20px; }
+
+/* Hover & Focus styles */
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:hover + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:focus + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox] + label:hover 							{ background-position: 0 0 }
+
+/* Active styles */
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:active + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox] + label:hover:active						{ background-position: 0 0x; }
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:active:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:checked + label:hover:active				{ background-position: 0 0x; }
+
+/* Disabled styles */
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:hover:disabled + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:focus:disabled + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled + label:hover,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled + label:hover:active			{ background-position: 0 0; }
+
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:hover:disabled:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:focus:disabled:checked + label,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label:hover,
+#divSearchStandardCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label:hover:active	{ background-position: 0 -20px; }
+
+
+
+/********************************** SearchAdvanced *************************************/
+
+#divSearchAdvanced .dd_chk_select_standard1
+{
+	border:1px solid #8e8d8d;
+	height: 45px;
+	margin: 12px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 18px;
+	text-decoration: none;
+	overflow: visible;
+	color: #9fa4a7;
+	background-color: white;
+	border-radius: 3px;
+	width:250px; 
+		
+	background-image: url('../images/arrow_from_register_with_bg.png');
+	background-position:right 0;
+	background-repeat: no-repeat;
+}
+
+
+#divSearchAdvanced .dd_chk_select_standard_Professions 
+{
+	height: 45px;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 16px;
+	text-decoration: none;
+	overflow: visible;
+	color: #9fa4a7;
+}
+
+#divSearchAdvanced .dd_chk_select_standard2 , #divSearchStandard .dd_chk_select_standard2
+{
+	border:1px solid #8e8d8d;
+	height: 43px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 15px;
+	text-decoration: none;
+	overflow: visible;
+	color: #9fa4a7;
+	background-color: white;
+	border-radius: 3px;
+	width:250px; 
+	background-image: url('../images/arrow_from_register_with_bg.png');
+	background-position:right 0;
+	background-repeat: no-repeat;
+	box-shadow: 1px 1px 1px #cccccc;  
+	line-height:32px;   
+}
+
+#divSearchAdvanced .dd_chk_select_standard2 input + label
+{
+	color: #9fa4a7;
+}
+
+#divSearchAdvanced .dd_chk_select_standard2 input + label:hover
+{
+	color: #7EBFBF;
+	cursor:pointer; 
+}
+
+#divSearchAdvanced .dd_chk_select_standard2 #caption ,#divSearchStandard .dd_chk_select_standard2 #caption
+{  
+    overflow: hidden;
+	text-align: left;
+	vertical-align: middle;
+	position: relative;
+	top: 1px;
+	line-height:42px; 
+	height: 43px;  
+	margin-left:6px; 
+	color: #9fa4a7;
+	font-size: 15px;
+
+}
+
+#divSearchAdvanced .dd_chk_drop , #divSearchStandard .dd_chk_drop
+{
+	background-color: white;
+	border: 1px solid #8e8d8d;
+	text-align: left;
+	z-index: 1000;
+	left: -1px;
+	top: 40px;
+	min-width: 100%;
+}
+
+#divSearchAdvanced .boxSerchAdvanced , #divSearchStandard .boxSerchAdvanced
+{
+    width:250px;
+    height:43px; 
+    margin:0px; 
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #cccccc;      
+    border:1px solid #8e8d8d;  
+    float:left;
+    font-size:20px; 
+    font-size: 15px;
+    color: #9fa4a7;
+    text-indent:15px;
+}
+
+
+#divSearchAdvancedCheckBoxList input
+{
+	padding: 0;
+	margin: 0;
+	height: 21px;
+	width: 21px;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;   
+}
+
+#divSearchAdvancedCheckBoxList label
+{
+	float: left; 
+	line-height: 21px; 
+	color: #9fa4a7;
+	padding: 0 20px 0 28px;
+	font-size: 15px;
+	margin-right:10px; 
+}
+
+#divSearchAdvancedCheckBoxList:not(#foo) input:hover + label, #divSearchAdvancedCheckBoxList:not(#foo) input:focus + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input + label:hover, #divSearchAdvancedCheckBoxList:not(#foo) input:focus + label			{  color: #7EBFBF; }
+
+#divSearchAdvancedCheckBoxList:not(#foo) input + label
+{
+	background: url('../images/sprite_for_check-box.png') 0 0 no-repeat;
+	height: 21px;
+	cursor:pointer;  
+}
+
+/* Checked styles */
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:checked + label 							{ background-position: 0 -20px; }
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:hover:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:focus:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:checked + label:hover,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:focus:checked + label 					{ background-position: 0 -20px; }
+
+/* Hover & Focus styles */
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:hover + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:focus + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox] + label:hover 							{ background-position: 0 0 }
+
+/* Active styles */
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:active + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox] + label:hover:active						{ background-position: 0 0x; }
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:active:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:checked + label:hover:active				{ background-position: 0 0x; }
+
+/* Disabled styles */
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:hover:disabled + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:focus:disabled + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled + label:hover,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled + label:hover:active			{ background-position: 0 0; }
+
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:hover:disabled:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:focus:disabled:checked + label,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label:hover,
+#divSearchAdvancedCheckBoxList:not(#foo) input[type=checkbox]:disabled:checked + label:hover:active	{ background-position: 0 -20px; }
+
+
